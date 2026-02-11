@@ -14,7 +14,7 @@ try:
     from kernle.structural import StructuralFinding, run_structural_checks
 except ImportError:
     raise ImportError(
-        "kernle-devtools requires kernle>=0.12.1 (kernle.structural module). "
+        "kernle-devtools requires kernle>=0.12.4 (kernle.structural module). "
         "Please upgrade: pip install --upgrade kernle"
     )
 

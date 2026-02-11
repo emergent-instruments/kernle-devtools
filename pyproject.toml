@@ -12,7 +12,7 @@ requires-python = ">=3.10"
 authors = [
     { name = "Emergent Instruments", email = "hello@emergentinstruments.com" },
 ]
-dependencies = ["kernle>=0.12.1"]
+dependencies = ["kernle>=0.12.4"]
 
 [project.entry-points."kernle.plugins"]
 devtools = "kernle_devtools.plugin:DevtoolsPlugin"
