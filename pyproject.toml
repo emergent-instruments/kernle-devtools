@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kernle-devtools"
+version = "0.1.0"
+description = "Admin dashboard and diagnostic tools for kernle memory stacks"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "Emergent Instruments", email = "hello@emergentinstruments.com" },
+]
+dependencies = ["kernle>=0.12.1"]
+
+[project.entry-points."kernle.plugins"]
+devtools = "kernle_devtools.plugin:DevtoolsPlugin"
+
+[project.scripts]
+kernle-dev = "kernle_devtools.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["kernle_devtools"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
